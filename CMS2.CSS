@@ -1,0 +1,152 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #b8ebf8 url("kcc4.png") no-repeat center center/cover;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Menu Wrapper */
+.menu-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 0;
+  height: 100%;
+  background-color: #6D2323;
+  color: white;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+}
+
+.menu-wrapper:hover .sidebar {
+  width: 240px;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  background-color: #6D2323(0,0,0);
+  color: #8E1616;
+  padding: 10px;
+  border-radius: 30%;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-content ul li {
+  padding: 15px 10px;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-content ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar-content ul li:hover {
+  background-color: #192e42;
+  color: rgb(202, 95, 202);
+}
+
+.sidebar-content ul li a:hover {
+  color: rgb(216, 77, 88);
+}
+
+/* Main Dashboard */
+.main-dash {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-dash h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.main-dash h3 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-container .box {
+  background-color: #8174A0;
+  color: #e9c8c8;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-container .box:hover {
+  background-color: #D84040;
+  color: #f1f1f1;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.grid-container .box:active {
+  background-color: #192e42;
+  color: #c9a97e;
+  transform: scale(0.95);
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
